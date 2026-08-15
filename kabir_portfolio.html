@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kabir Raut — Student Success & Customer Experience</title>
+<meta name="description" content="Kabir Raut — IT graduate from Charles Darwin University with hands-on experience in student support, customer service, and administration in Darwin, NT.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kabir Raut — Student Success & Customer Experience">
+<meta property="og:description" content="IT graduate from Charles Darwin University with hands-on experience supporting students, customers, and teams across service-focused roles in Darwin, NT.">
+<meta property="og:url" content="https://kabirtech.online">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Kabir Raut — Student Success & Customer Experience">
+<meta name="twitter:description" content="IT graduate from Charles Darwin University with hands-on experience in student support, customer service, and administration.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23152238'/%3E%3Ctext x='50' y='68' font-size='50' font-family='Arial, sans-serif' font-weight='700' fill='%23C96A3B' text-anchor='middle'%3EKR%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#152238;
+    --paper:#FBFAF7;
+    --panel:#F1EEE6;
+    --accent:#C96A3B;
+    --accent-soft:#E9C9B4;
+    --muted:#5B6470;
+    --line:rgba(21,34,56,0.12);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--paper); color:var(--ink); font-family:'Inter',sans-serif; line-height:1.6; -webkit-font-smoothing:antialiased;}
+  @media (prefers-reduced-motion: reduce){ *{animation-duration:.001ms !important; transition-duration:.001ms !important;} }
+  a{color:inherit;}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
+  .display{font-family:'Sora',sans-serif;}
+  .wrap{max-width:980px; margin:0 auto; padding:0 28px;}
+  img,svg{max-width:100%; display:block;}
+
+  header{position:sticky; top:0; z-index:40; background:rgba(251,250,247,0.92); backdrop-filter:blur(6px); border-bottom:1px solid var(--line);}
+  header .wrap{display:flex; align-items:center; justify-content:space-between; height:66px;}
+  .brand{font-family:'Sora',sans-serif; font-weight:700; font-size:18px;}
+  nav{display:flex; gap:26px;}
+  nav a{font-size:13.5px; font-weight:600; text-decoration:none; color:var(--muted);}
+  nav a:hover{color:var(--accent);}
+  @media(max-width:640px){nav{gap:14px;} nav a{font-size:11.5px;}}
+
+  /* hero */
+  .hero{background:var(--ink); color:var(--paper); padding:80px 0 90px; position:relative; overflow:hidden;}
+  .hero::before{
+    content:''; position:absolute; right:-120px; top:-120px; width:420px; height:420px; border-radius:50%;
+    background:radial-gradient(circle at 30% 30%, var(--accent), transparent 70%); opacity:0.35;
+  }
+  .hero-inner{position:relative; z-index:1; display:flex; flex-direction:column; align-items:flex-start; gap:22px;}
+  .status-badge{
+    font-size:12.5px; font-weight:600; letter-spacing:0.02em; color:var(--paper);
+    background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.18);
+    padding:8px 16px; border-radius:999px; opacity:0; animation:fadeUp .6s ease forwards;
+  }
+  .avatar{
+    width:96px; height:96px; border-radius:50%; background:linear-gradient(135deg,var(--accent),#8A4A2A);
+    display:flex; align-items:center; justify-content:center; font-family:'Sora',sans-serif; font-weight:700; font-size:32px;
+    color:#fff; flex-shrink:0; opacity:0; animation:fadeUp .6s ease forwards;
+  }
+  h1{font-family:'Sora',sans-serif; font-weight:800; font-size:clamp(36px,6vw,54px); line-height:1.05; opacity:0; animation:fadeUp .6s ease .1s forwards;}
+  .role{font-family:'Sora',sans-serif; font-weight:600; font-size:16px; color:var(--accent-soft); opacity:0; animation:fadeUp .6s ease .18s forwards;}
+  .hero p.tag{max-width:560px; color:rgba(251,250,247,0.78); font-size:16.5px; opacity:0; animation:fadeUp .6s ease .26s forwards;}
+  @keyframes fadeUp{from{opacity:0; transform:translateY(14px);} to{opacity:1; transform:translateY(0);}}
+  .hero-actions{display:flex; gap:14px; flex-wrap:wrap; opacity:0; animation:fadeUp .6s ease .34s forwards;}
+  .btn{display:inline-flex; align-items:center; gap:8px; font-size:13.5px; font-weight:700; padding:12px 22px; border-radius:8px; text-decoration:none; transition:transform .15s ease;}
+  .btn.solid{background:var(--accent); color:#fff;}
+  .btn.outline{border:1.5px solid rgba(251,250,247,0.4); color:var(--paper);}
+  .btn:hover{transform:translateY(-2px);}
+
+  .contact-menu{
+    position:absolute; top:calc(100% + 10px); left:0; z-index:50;
+    background:var(--paper); border-radius:10px; overflow:hidden;
+    box-shadow:0 18px 40px -14px rgba(0,0,0,0.5);
+    display:none; flex-direction:column; min-width:190px;
+  }
+  .contact-menu.open{display:flex;}
+  .contact-menu a{
+    padding:13px 18px; font-size:14px; font-weight:600; color:var(--ink); text-decoration:none;
+    display:flex; align-items:center; gap:10px;
+  }
+  .contact-menu a:hover{background:var(--panel);}
+  .contact-menu a + a{border-top:1px solid var(--line);}
+
+  /* about */
+  section{padding:64px 0; scroll-margin-top:80px;}
+  section + section{border-top:1px solid var(--line);}
+  .section-title{font-family:'Sora',sans-serif; font-weight:800; font-size:26px; margin-bottom:26px;}
+  .about-text{max-width:720px; color:var(--muted); font-size:15.5px;}
+
+  /* skills grid */
+  .skills-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:28px;}
+  .skills-statement{
+    font-size:clamp(28px,4.5vw,44px); font-weight:700; line-height:1.15; margin-bottom:40px;
+    color:var(--ink);
+  }
+  .skills-statement span{color:var(--accent);}
+
+  .marquee-wrap{
+    margin-top:44px; overflow:hidden; border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+    padding:18px 0;
+  }
+  .marquee-track{
+    display:flex; gap:16px; white-space:nowrap; width:max-content;
+    font-family:'Sora',sans-serif; font-weight:700; font-size:clamp(18px,3vw,26px); color:var(--ink);
+    animation:marquee 26s linear infinite;
+  }
+  .marquee-track span:nth-child(even){color:var(--accent);}
+  @keyframes marquee{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
+  @media (prefers-reduced-motion: reduce){ .marquee-track{animation:none;} }
+  .skill-group h3{font-family:'Sora',sans-serif; font-size:14.5px; font-weight:700; margin-bottom:12px; color:var(--accent);}
+  .skill-group ul{list-style:none; display:flex; flex-direction:column; gap:8px;}
+  .skill-group li{font-size:14px; color:var(--ink); padding-left:16px; position:relative;}
+  .skill-group li::before{content:''; position:absolute; left:0; top:8px; width:6px; height:6px; border-radius:50%; background:var(--accent);}
+
+  /* experience */
+  .exp-item{padding:26px 0; border-bottom:1px solid var(--line); display:grid; grid-template-columns:170px 1fr; gap:22px;}
+  .exp-item:last-child{border-bottom:none;}
+  @media(max-width:620px){.exp-item{grid-template-columns:1fr;}}
+  .exp-date{font-size:12.5px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:0.04em;}
+  .exp-role{font-family:'Sora',sans-serif; font-weight:700; font-size:18px; margin-bottom:2px;}
+  .exp-org{font-size:13.5px; color:var(--accent); font-weight:600; margin-bottom:10px;}
+  .exp-item ul{padding-left:18px; color:var(--muted); font-size:14px; display:flex; flex-direction:column; gap:5px;}
+  .exp-note{color:var(--muted); font-size:14px; margin-bottom:8px;}
+  .exp-note a{color:var(--accent); font-weight:600; text-decoration:none; border-bottom:1px solid var(--accent);}
+  .exp-highlight{color:var(--muted); font-size:14.5px; line-height:1.5; max-width:560px;}
+
+  /* education card */
+  .edu-card{background:var(--panel); border-radius:14px; padding:26px 28px; display:flex; justify-content:space-between; align-items:flex-start; gap:20px; flex-wrap:wrap;}
+  .edu-card h3{font-family:'Sora',sans-serif; font-size:18px; margin-bottom:4px;}
+  .edu-card p{color:var(--muted); font-size:14px;}
+  .edu-when{font-size:12.5px; font-weight:700; color:var(--accent);}
+
+  /* contact form */
+  .contact-wrap{display:grid; grid-template-columns:1fr 1.2fr; gap:46px;}
+  @media(max-width:700px){.contact-wrap{grid-template-columns:1fr;}}
+  .contact-info p{color:var(--muted); font-size:14.5px; margin-bottom:18px;}
+  .contact-info .line{display:flex; align-items:center; gap:10px; font-size:14px; margin-bottom:10px; text-decoration:none; color:var(--ink); width:fit-content;}
+  .contact-info a.line:hover{color:var(--accent);}
+  .contact-info .line .ico{color:var(--accent); font-weight:700;}
+
+  .contact-simple{max-width:520px;}
+  .contact-simple > p{color:var(--muted); font-size:15.5px; margin-bottom:28px;}
+  .contact-buttons{display:flex; gap:16px; flex-wrap:wrap;}
+  .contact-btn{font-size:15px; padding:15px 28px;}
+  .btn.whatsapp-btn{background:#25D366; color:#0b3d1f;}
+  .contact-meta{display:flex; gap:22px; flex-wrap:wrap; margin-top:26px; font-size:13.5px; color:var(--muted);}
+  form{display:flex; flex-direction:column; gap:14px;}
+  .form-row{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  @media(max-width:500px){.form-row{grid-template-columns:1fr;}}
+  input,textarea{
+    width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:8px;
+    background:var(--panel); font-family:'Inter',sans-serif; font-size:14px; color:var(--ink);
+  }
+  textarea{resize:vertical; min-height:110px;}
+  input::placeholder, textarea::placeholder{color:var(--muted);}
+  button.submit{
+    align-self:flex-start; background:var(--ink); color:var(--paper); border:none; cursor:pointer;
+    padding:13px 26px; border-radius:8px; font-family:'Sora',sans-serif; font-weight:700; font-size:14px;
+    transition:transform .15s ease;
+  }
+  button.submit:hover{transform:translateY(-2px);}
+  .form-note{font-size:12.5px; color:var(--muted); margin-top:4px;}
+
+  footer{background:var(--ink); color:rgba(251,250,247,0.7); padding:34px 0;}
+  footer .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:12.5px;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">Kabir Raut</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="status-badge">🟢 Open to full-time opportunities in Darwin, NT</div>
+    <div class="avatar">KR</div>
+    <h1>Kabir Raut</h1>
+
+    <p class="tag">An IT graduate from Charles Darwin University with hands-on experience supporting students,
+      customers, and teams across service-focused roles in Darwin, NT.</p>
+    <div class="hero-actions">
+      <a class="btn solid" href="Kabir_Raut_Resume.pdf" target="_blank" rel="noopener">View Resume</a>
+      <a class="btn outline" href="#contact">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><section id="about">
+  <div class="section-title display">About Kabir</div>
+  <p class="about-text">
+    I recently completed my Bachelor of Information Technology at Charles Darwin University and bring two
+    years of experience in customer service, student support, and administration across Darwin. As a
+    Casual Student Success Partner at CDU, I supported new students through phone, email, Teams, and
+    face-to-face contact — helping them navigate university systems and settle into their first semester
+    with confidence. Alongside my studies, I worked in security and retail, and I currently work as a
+    cleaner, building reliability, clear communication, and a genuine ability to connect with people from
+    all backgrounds. Fluent in English, Nepali, and Hindi, I bring a culturally aware, people-first
+    approach to every role, and I am now looking to bring that same care into a full-time position.
+  </p>
+</section></div>
+
+<div class="wrap"><section id="skills">
+  <div class="section-title display">Skills</div>
+  <p class="skills-statement display">Good with people.<br><span>Reliable with systems.</span></p>
+
+  <div class="skills-grid">
+    <div class="skill-group">
+      <h3>Customer &amp; Student Support</h3>
+      <ul>
+        <li>Multi-channel support (phone, email, Teams)</li>
+        <li>Onboarding &amp; orientation guidance</li>
+        <li>Issue resolution &amp; escalation</li>
+        <li>Confidential record-keeping</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h3>Technical &amp; Admin</h3>
+      <ul>
+        <li>Microsoft Excel &amp; M365</li>
+        <li>Word, Outlook, Teams</li>
+        <li>Documentation &amp; reporting</li>
+        <li>CDU systems &amp; Learnline</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h3>Languages</h3>
+      <ul>
+        <li>English</li>
+        <li>Nepali</li>
+        <li>Hindi</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h3>Soft Skills</h3>
+      <ul>
+        <li>Teamwork &amp; collaboration</li>
+        <li>Problem solving</li>
+        <li>Time management</li>
+        <li>Cultural sensitivity</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>Customer Service</span><span>·</span>
+      <span>Excel &amp; M365</span><span>·</span>
+      <span>English</span><span>·</span>
+      <span>Nepali</span><span>·</span>
+      <span>Hindi</span><span>·</span>
+      <span>Problem Solving</span><span>·</span>
+      <span>Teamwork</span><span>·</span>
+      <span>Documentation</span><span>·</span>
+      <span>Customer Service</span><span>·</span>
+      <span>Excel &amp; M365</span><span>·</span>
+      <span>English</span><span>·</span>
+      <span>Nepali</span><span>·</span>
+      <span>Hindi</span><span>·</span>
+      <span>Problem Solving</span><span>·</span>
+      <span>Teamwork</span><span>·</span>
+      <span>Documentation</span><span>·</span>
+    </div>
+  </div>
+</section></div>
+
+<div class="wrap"><section id="experience">
+  <div class="section-title display">Experience</div>
+
+  <div class="exp-item">
+    <div class="exp-date">Jun 2026 —<br>29 Jul 2026</div>
+    <div>
+      <div class="exp-role">Casual Student Success Partner</div>
+      <div class="exp-org">Charles Darwin University · Darwin, Australia</div>
+      <p class="exp-highlight">Supported new students end-to-end — onboarding, orientation, and day-to-day guidance across phone, email, and Teams.</p>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-date">Jul 2024 —<br>Present</div>
+    <div>
+      <div class="exp-role">Cleaner</div>
+      <div class="exp-org">Drill Cleaning Service · Darwin, Australia</div>
+      <p class="exp-highlight">Maintained clean, safe environments with consistent attention to detail.</p>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-date">May 2024 —<br>Aug 2025</div>
+    <div>
+      <div class="exp-role">Sales Representative</div>
+      <div class="exp-org">North Side Burger · Darwin, Australia</div>
+      <p class="exp-highlight">Delivered fast, friendly customer service and handled sales and payments in a busy environment.</p>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-date">Apr 2023 —<br>Aug 2025</div>
+    <div>
+      <div class="exp-role">Security Guard</div>
+      <div class="exp-org">MSA Millennium Security & Alarms Services · Darwin, Australia</div>
+      <p class="exp-highlight">Managed visitor access and responded to incidents, keeping people and property safe.</p>
+    </div>
+  </div>
+
+</section></div>
+
+
+<div class="wrap"><section id="education-sec">
+  <div class="section-title display">Education</div>
+  <div class="edu-card">
+    <div>
+      <h3>Bachelor of Information Technology</h3>
+      <p>Charles Darwin University, Darwin, NT</p>
+    </div>
+    <div class="edu-when">Mar 2023 — Jun 2026</div>
+  </div>
+</section></div>
+
+<div class="wrap"><section id="contact">
+  <div class="section-title display">Get in Touch</div>
+  <div class="contact-simple">
+    <p>Have a role in mind, or just want to connect? Reach out directly — whichever's easiest for you.</p>
+    <div class="contact-buttons">
+      <a class="btn solid contact-btn" href="mailto:kabirraut436@gmail.com,kabir.raut@cdu.edu.au" target="_blank" rel="noopener">✉ Email Me</a>
+      <a class="btn whatsapp-btn contact-btn" href="https://wa.me/61481989132" target="_blank" rel="noopener">💬 WhatsApp</a>
+    </div>
+    <div class="contact-meta">
+      <span>📍 Darwin, NT</span>
+    </div>
+  </div>
+</section></div>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Kabir Raut. All rights reserved.</span>
+    <span>kabirraut436@gmail.com · 0481 989 132</span>
+  </div>
+</footer>
+
+</body>
+</html>
